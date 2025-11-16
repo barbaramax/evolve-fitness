@@ -4,10 +4,10 @@
 
 Este projeto é a implementação em código de um protótipo de site para uma academia fictícia, a EvolveFitness.
 
-O design original foi criado como um trabalho acadêmico para a disciplina de INTERFACE H M E ARQUITETURA DA INFORMAÇÃO. A prototipação de alta fidelidade foi realizada inteiramente no Figma.
+O design original foi criado como um trabalho acadêmico para a disciplina de INTERFACE H M E ARQUITETURA DA INFORMAÇÃO. A prototipação foi realizada inteiramente no Figma.
 Após a conclusão do design, decidi transformar o protótipo estático em um site funcional e interativo. O objetivo principal foi aprender o processo de desenvolvimento front-end, desde a concepção visual até o código. Para acelerar o aprendizado e a codificação, utilizei o auxílio de inteligência artificial como uma ferramenta, me ajudando na realização do projeto.
 
-Você pode visualizar o protótipo original de alta fidelidade que serviu como base para este projeto no link abaixo:
+Você pode visualizar o protótipo que serviu como base para este projeto no link abaixo:
 https://www.figma.com/proto/bmEpRkuPUDsqLMIIey3A9x/Prototipa%C3%A7%C3%A3o?node-id=1-3&p=f&t=TqBkyAG7HrvmaXvH-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3
 
 ---
