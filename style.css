@@ -1,0 +1,749 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Manrope', Arial, sans-serif;
+    background-color: #DEDEDE;
+    color: #5A5A5A;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.matricula,
+.comece,
+.btn-matricula {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #7A5C39;
+    color: #FFFFFF;
+    display: inline-block;
+}
+
+.matricula:hover,
+.comece:hover,
+.btn-matricula:hover {
+    background-color: #61482c;
+    transform: scale(1.03);
+}
+
+.comece {
+    padding: 12px 28px;
+    font-size: 16px;
+}
+
+.btn-matricula {
+    width: 100%;
+    padding: 12px;
+}
+
+.titulo-secao {
+    font-size: 40px;
+    color: #2C2C2C;
+    margin-bottom: 10px;
+    font-weight: 800;
+    text-align: center;
+}
+.subtitulo-secao {
+    font-size: 19px;
+    color: #8B6D4C;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.txt {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #5A5A5A;
+    text-align: center;
+}
+.txt.texto-pequeno {
+    font-size: 13px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 10;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+.logo img {
+    filter: invert();
+    height: 40px; 
+    margin-right: 10px;
+}
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.destaque {
+    position: relative;
+    height: 100vh;
+    background-color: #2C2C2C;
+    background-image: url('imagens/header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sombra {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.5); 
+    z-index: 1;
+}
+.conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.conteudo h1 {
+    font-size: 56px;
+    font-weight: 800;
+}
+.subtitulo {
+    font-size: 56px;
+    color: #8B6D4C;
+    font-weight: 800;
+    margin-top: -10px;
+}
+.conteudo p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+.localizacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.container-sobre {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-atletas,
+.card-img {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    min-height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.card-conteudo {
+    padding: 24px;
+    position: relative;
+    z-index: 2;
+    padding-top: 150px;
+}
+#card-atletas {
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 10%, transparent 60%), url('imagens/atleta.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#card-iniciantes {
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 10%, transparent 60%), url('imagens/iniciante.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#card-acompanhamento {
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 10%, transparent 60%), url('imagens/acompanhamento.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.card-atletas h3, .card-atletas p,
+.card-img h3, .card-img p {
+    color: #FFFFFF;
+}
+
+.container-conheca {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.grid-conheca {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    text-align: left;
+}
+.fotos-academia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    gap: 20px;
+    height: 520px; 
+}
+.card-foto {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+#musculacao { 
+    background-image: url('imagens/musculacao.jpg'); 
+}
+#cardio { 
+    background-image: url('imagens/cardio.jpg'); 
+}
+#yoga { 
+    background-image: url('imagens/yoga.jpg');
+}
+#crossfit { 
+    background-image: url('imagens/crossfit.jpg'); 
+}
+
+.card-foto span {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+.info-academia .info {
+    background: #FFFFFF;
+    padding: 24px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.info-academia h3 {
+    font-size: 21px;
+    color: #2C2C2C;
+    margin-bottom: 15px;
+}
+.info-academia p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.info-academia i {
+    color: #7A5C39;
+}
+.lista-horarios {
+    list-style: none;
+}
+.lista-horarios li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+.lista-horarios li span:last-child {
+    font-weight: 700;
+    color: #8B6D4C;
+}
+
+.container-atividades {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card-atividade {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 30px;
+    text-align: center;
+}
+.card-atividade h3 {
+    font-size: 21px;
+    color: #2C2C2C;
+    margin-bottom: 10px;
+}
+.card-atividade p {
+    font-size: 15px;
+}
+
+.container-lanchonete {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card-lanchonete {
+    display: flex;
+    background: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.lanchonete-imagem {
+    flex: 0 0 40%;
+    background-image: url('imagens/lanchonete.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+.lanchonete-conteudo {
+    padding: 40px;
+    text-align: left;
+    flex: 1;
+}
+.lanchonete-conteudo h3 {
+    font-size: 29px;
+    color: #2C2C2C;
+}
+.lanchonete-menu {
+    list-style: none;
+    margin: 20px 0;
+}
+.lanchonete-menu li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #E0E0E0;
+}
+.lanchonete-promo {
+    background-color: #FFF8E1;
+    border: 1px solid #8B6D4C;
+    color: #8B6D4C;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    display: inline-block;
+}
+.lanchonete-promo i {
+    margin-right: 5px;
+}
+
+.planos-container {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card-plano {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.card-plano:hover{
+    transform: scale(1.03);
+}
+.card-plano h3 {
+    font-size: 21px;
+    color: #2C2C2C;
+    margin-bottom: 10px;
+}
+.card-plano .preco {
+    font-size: 35px;
+    font-weight: 800;
+    color: #2C2C2C;
+    margin: 10px 0 20px 0;
+}
+.card-plano .preco span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #5A5A5A;
+}
+.lista-beneficios {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+.lista-beneficios li {
+    padding: 8px 0;
+    font-size: 15px;
+    position: relative;
+    padding-left: 20px; 
+}
+.lista-beneficios li::before {
+    content: '•';
+    color: #7A5C39;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    line-height: 1;
+}
+
+.feedbacks-container {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card-feedback {
+    display: flex;
+    gap: 20px;
+    background: #FFFFFF;
+    padding: 24px;
+    border-radius: 20px;
+    text-align: left;
+}
+.feedback-autor {
+    flex: 0 0 40%;
+}
+.feedback-autor h4 {
+    font-size: 18px;
+    color: #2C2C2C;
+}
+.feedback-autor span {
+    display: block;
+    font-size: 14px;
+}
+.feedback-autor .verificado {
+    color: #008000;
+    font-weight: 700;
+    margin-top: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.feedback-conteudo .estrelas {
+    color: #FFC107;
+    font-size: 19px;
+}
+.feedback-conteudo p {
+    font-size: 19px;
+    font-style: italic;
+    color: #2C2C2C;
+    font-weight: 700;
+}
+
+.contato-container {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card-contato {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 30px;
+    text-align: left;
+}
+.card-contato h3 {
+    font-size: 21px;
+    color: #2C2C2C;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.info-contato {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.footer-principal {
+    background-color: #ACACAC;
+    color: black;
+    padding: 60px 20px 0 20px;
+    margin-top: 40px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo-footer {
+    height: 40px;
+    margin-bottom: 15px;
+}
+.footer-coluna p {
+    color: black;
+    font-size: 14px;
+    max-width: 300px;
+}
+.footer-coluna h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.lista-footer {
+    list-style: none;
+    font-size: 14px;
+}
+.lista-footer li {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: black;
+}
+.lista-footer li i {
+    color: #8B6D4C;
+}
+.lista-footer li span {
+    flex: 1;
+}
+.lista-footer li span:last-child {
+    flex: 0 0 auto;
+}
+.lista-footer li span + span {
+    color: #8B6D4C;
+    font-weight: 700;
+    text-align: right;
+}
+.footer-inferior {
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+}
+
+body.login {
+    background-color: #EFEFEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+    flex-direction: column;
+}
+
+.titulo-login {
+    font-size: 32px;
+    color: #2C2C2C;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-matricula {
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.login-imagem {
+    flex-basis: 50%;
+    position: relative;
+    background-image: url('imagens/header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    min-height: 700px;
+}
+
+.login-imagem .sombra {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.5); 
+    z-index: 1;
+}
+
+.login-imagem .conteudo {
+    position: relative;
+    z-index: 2;
+}
+
+.login-imagem .conteudo h1 {
+    font-size: 56px;
+    font-weight: 800;
+}
+
+.login-imagem .conteudo .subtitulo {
+    font-size: 56px;
+    color: #8B6D4C;
+    font-weight: 800;
+    margin-top: -10px;
+}
+
+.bnt-inicial {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background-color: #FFFFFF;
+    color: #7A5C39;
+    border: 1px solid #7A5C39;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.bnt-inicial:hover {
+    background-color: #f7f7f7;
+}
+
+.login-formulario {
+    flex-basis: 50%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.formulario-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.titulo-loginf {
+    font-size: 32px;
+    color: #2C2C2C;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario-container h3 {
+    font-size: 20px;
+    color: #2C2C2C;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.form-matricula {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.grupo-form, .login-form {
+    margin-bottom: 15px;
+}
+
+.grupo-form.saude {
+    grid-column: span 2;
+}
+
+.grupo-form label, .login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #5A5A5A;
+    font-size: 14px;
+}
+
+.grupo-form input,
+.grupo-form textarea,
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Manrope', Arial, sans-serif;
+    border: 1px solid #E0E0E0;
+}
+
+.grupo-form textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.btn-form, .botao-form {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #7A5C39;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.btn-form:hover, .botao-form:hover {
+    background-color: #61482c;
+}
+
+.cadastro, .criar-conta {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.cadastro a, .criar-conta a {
+    color: #7A5C39;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.btn-inicio {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    background-color: #FFFFFF;
+    color: #7A5C39;
+    border: 1px solid #7A5C39;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn-inicio:hover {
+    background-color: #f7f7f7;
+}
