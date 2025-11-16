@@ -35,6 +35,6 @@ A interface foi projetada para ser moderna, motivadora e profissional, transmiti
 * **HTML5:** Utilizado para a estrutura semântica de todo o conteúdo das páginas.
 * **CSS3:** Empregado para estilização, layout e responsividade do site.
 * **JavaScript:** Utilizado para a funcionalidade de troca de abas na página de login/matrícula.
-* * **Figma:** Ferramenta de design e prototipação onde o projeto foi concebido.
+* **Figma:** Ferramenta de design e prototipação onde o projeto foi concebido.
 
 ---
